@@ -12,8 +12,8 @@ export const MyPosts = () => {
                 <button>Add post</button>
             </div>
             <div className={s.posts}>
-                <Post message="Hello, how r u?" likesCount="1"/>
-                <Post message="It's my first post" likesCount="5"/>
+                <Post message="Hello, how r u?" likesCount={1}/>
+                <Post message="It's my first post" likesCount={5}/>
             </div>
         </div>
     )
