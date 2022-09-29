@@ -1,17 +1,15 @@
 .nav {
     grid-area: nav;
     background-color: bisque;
+    padding: 20px;
 }
 
 .item {
-    color: white;
+    color: gray;
+    text-decoration: none;
 }
 
-.item.active {
+.active {
     color: black;
-}
-
-a {
-    color: inherit;
     text-decoration: none;
 }
