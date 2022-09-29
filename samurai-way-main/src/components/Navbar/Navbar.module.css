@@ -1,6 +1,6 @@
 .nav {
     grid-area: nav;
-    background-color: blue;
+    background-color: bisque;
 }
 
 .item {
@@ -8,5 +8,10 @@
 }
 
 .item.active {
-    color: red;
+    color: black;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
