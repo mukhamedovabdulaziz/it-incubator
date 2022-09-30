@@ -3,7 +3,7 @@
     grid-template-columns: 2fr 10fr;
 }
 
-.dialogsItems {
+.contactsItems {
     padding: 10px;
     color: gray;
 }
@@ -14,8 +14,4 @@
 
 .messages {
     padding: 10px;
-}
-
-.message {
-
 }
