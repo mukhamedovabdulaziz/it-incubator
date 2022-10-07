@@ -1,6 +1,5 @@
 import React from 'react';
 import s from "./Dialogs.module.css"
-import {findAllByDisplayValue} from "@testing-library/react";
 import {NavLink} from "react-router-dom";
 
 type dialogItemsPropsType = {
@@ -25,20 +24,32 @@ const Message = (props: messagePropsType) => {
 }
 
 export const Dialogs = () => {
+
+  const dialogsData = [
+    {id: 1, name: "Nazim"},
+    {id: 2, name: "Bekzhan"},
+    {id: 3, name: "Timur"},
+    {id: 4, name: "Aldiyar"},
+    {id: 5, name: "Ali"},
+    {id: 6, name: "Arystan"}
+  ];
+
+  const messagesData = [
+    {id: 1, message: "Hi"},
+    {id: 2, message: "How r u?"},
+    {id: 3, message: "Yo"},
+  ];
+
   return (
     <div className={s.dialogs}>
       <div className={s.contactsItems}>
-        <DialogItems name={"Nazim"} id={1}/>
-        <DialogItems name={"Bekzhan"} id={2}/>
-        <DialogItems name={"Timur"} id={3}/>
-        <DialogItems name={"Aldiyar"} id={4}/>
-        <DialogItems name={"Ali"} id={5}/>
-        <DialogItems name={"Arystan"} id={6}/>
+        <DialogItems name={dialogsData[0].name} id={dialogsData[0].id}/>
+        <DialogItems name={dialogsData[1].name} id={dialogsData[1].id}/>
+        <DialogItems name={dialogsData[2].name} id={dialogsData[2].id}/>
       </div>
       <div className={s.messages}>
-        <Message message={"Hi"}/>
-        <Message message={"How r u?"}/>
-        <Message message={"Yo"}/>
+        <Message message={messagesData[0].message}/>
+        <Message message={messagesData[1].message}/>
       </div>
     </div>
 );
