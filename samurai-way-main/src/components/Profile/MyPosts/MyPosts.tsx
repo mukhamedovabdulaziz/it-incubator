@@ -5,7 +5,13 @@ import {Post} from "./Post/Post";
 
 export const MyPosts = () => {
 
-  const postsData = [
+  type postDataType = {
+    id: number
+    message: string
+    likes: number
+  }
+
+  const postsData: Array<postDataType> = [
     {id: 1, message: "Hello, how r u?", likes: 15},
     {id: 2, message: "It's my first post", likes: 20}
   ];

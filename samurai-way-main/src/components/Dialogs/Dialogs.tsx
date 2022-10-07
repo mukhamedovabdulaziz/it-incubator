@@ -25,7 +25,12 @@ const Message = (props: messagePropsType) => {
 
 export const Dialogs = () => {
 
-  const dialogsData = [
+  type dialogsType = {
+    id: number
+    name: string
+  }
+
+  const dialogsData: Array<dialogsType> = [
     {id: 1, name: "Nazim"},
     {id: 2, name: "Bekzhan"},
     {id: 3, name: "Timur"},
@@ -34,7 +39,12 @@ export const Dialogs = () => {
     {id: 6, name: "Arystan"}
   ];
 
-  const messagesData = [
+  type messagesData = {
+    id: number
+    message: string
+  }
+
+  const messagesData: Array<messagesData> = [
     {id: 1, message: "Hi"},
     {id: 2, message: "How r u?"},
     {id: 3, message: "Yo"},
