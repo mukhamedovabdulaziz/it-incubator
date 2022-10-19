@@ -8,22 +8,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import { News } from './components/News/News';
 import { Settings } from './components/Settings/Settings';
 import { Music } from './components/Music/Music';
-
-type postDataType = {
-  id: number
-  message: string
-  likes: number
-}
-
-type dialogsDataType = {
-  id: number
-  name: string
-}
-
-type messagesDataType = {
-  id: number
-  message: string
-}
+import {dialogsDataType, messagesDataType, postDataType} from "./redux/state";
 
 type AppsType = {
   posts: Array<postDataType>

@@ -1,15 +1,15 @@
-type postDataType = {
+export type postDataType = {
   id: number
   message: string
   likes: number
 }
 
-type dialogsDataType = {
+export type dialogsDataType = {
   id: number
   name: string
 }
 
-type messagesDataType = {
+export type messagesDataType = {
   id: number
   message: string
 }
