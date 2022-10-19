@@ -14,7 +14,7 @@ export type messagesDataType = {
   message: string
 }
 
-type stateType = {
+export type stateType = {
   posts: Array<postDataType>
   dialogs: Array<dialogsDataType>
   messages: Array<messagesDataType>
