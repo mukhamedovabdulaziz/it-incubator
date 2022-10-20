@@ -1,3 +1,5 @@
+import {rerenderEntireTitle} from "../render";
+
 export type postDataType = {
   id: number
   message: string
@@ -55,6 +57,7 @@ export let addPost = (postMessage: string) => {
     likes: 0
   };
   state.profilePage.posts.push(newPost);
+  rerenderEntireTitle(state);
 }
 
 export default state;
