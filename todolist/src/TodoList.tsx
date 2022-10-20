@@ -22,7 +22,7 @@ export function TodoList(props: PropsType) {
   const [newTaskTitle, setNewTaskTitle] = useState("");
   const [error, setError] = useState<string>("");
 
-  const addTask = () => {
+  const addNewTask = () => {
     if (newTaskTitle.trim() !== "") {
       props.addTask(newTaskTitle.trim());
       setNewTaskTitle("");
@@ -38,7 +38,7 @@ export function TodoList(props: PropsType) {
   const onKeyUpHandler = (e: KeyboardEvent<HTMLInputElement>) => {
     setError("");
     if (e.key === "Enter") {
-      addTask();
+      addNewTask();
     }
   }
 
@@ -56,7 +56,7 @@ export function TodoList(props: PropsType) {
                onKeyUp={onKeyUpHandler}
                className={error ? "error" : ""}
         />
-        <button onClick={addTask}>+</button>
+        <button onClick={addNewTask}>+</button>
         {error && <div className="error-message">{error}</div>}
       </div>
       <ul>
