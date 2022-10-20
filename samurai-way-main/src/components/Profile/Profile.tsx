@@ -5,6 +5,7 @@ import {postDataType} from "../../redux/state";
 
 type postsType = {
   posts: Array<postDataType>
+  addPost: any //?
 }
 
 export const Profile = (props: postsType) => {
@@ -12,7 +13,7 @@ export const Profile = (props: postsType) => {
   return (
     <div>
       <ProfileInfo/>
-      <MyPosts posts={props.posts}/>
+      <MyPosts posts={props.posts} addPost={props.addPost}/>
     </div>
   )
 }
