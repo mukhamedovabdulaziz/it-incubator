@@ -51,7 +51,7 @@ let state: stateType = {
 }
 
 export let addPost = (postMessage: string) => {
-  let newPost = {
+  let newPost: postDataType = {
     id: 5,
     message: postMessage,
     likes: 0

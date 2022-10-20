@@ -12,7 +12,7 @@ import {addPost, stateType} from "./redux/state";
 
 type AppsType = {
   state: stateType
-  addPost: any //?
+  addPost: (addPost:string) => void;
 }
 
 function App(props: AppsType) {
