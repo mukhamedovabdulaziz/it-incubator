@@ -15,8 +15,6 @@ function App() {
     {id: v1(), title: "NodeJS", isDone: false}
   ]);
 
-  let [filter, setFilter] = useState<FilteredValuesType>("all");
-
   function removeTask(id: string) {
     let filteredTasks = tasks.filter(t => t.id !== id)
     setTasks(filteredTasks);
@@ -27,6 +25,17 @@ function App() {
     let newTasks = [newTask, ...tasks];
     setTasks(newTasks);
   }
+
+  function changeStatus(taskId: string, isDone: boolean) {
+    let task = tasks.find(t => t.id === taskId)
+    if (task) {
+      task.isDone = isDone;
+    }
+
+    setTasks([...tasks]);
+  }
+
+  let [filter, setFilter] = useState<FilteredValuesType>("all");
 
   function changeFilter(value: FilteredValuesType) {
     setFilter(value);
@@ -48,6 +57,7 @@ function App() {
                 removeTask={removeTask}
                 changeFilter={changeFilter}
                 addTask={addTask}
+                changeTaskStatus={changeStatus}
       />
     </div>
   );
