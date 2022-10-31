@@ -21,7 +21,7 @@ function App() {
       <Accordion titleValue={"Menu"}
                  collapsed={accordionCollapsed}
                  onChange={() => setAccordionCollapsed(!accordionCollapsed)}/>
-      <OnOff on={switchOn} onChange={setSwitchOn} title={}/>
+      <OnOff on={switchOn} onChange={setSwitchOn}/>
       {/*<PageTitle title={"This is my APP"}/>*/}
       {/*<PageTitle title={"My friends"}/>*/}
       {/*<Accordion titleValue={"Users"} collapsed={false}/>*/}
