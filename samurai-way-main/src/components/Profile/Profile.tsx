@@ -8,7 +8,7 @@ type postsType = {
   addPost: (addPost:string) => void;
 }
 
-export const Profile = (props: postsType) => {
+function Profile(props: postsType) {
 
   return (
     <div>
@@ -17,3 +17,5 @@ export const Profile = (props: postsType) => {
     </div>
   )
 }
+
+export default Profile;

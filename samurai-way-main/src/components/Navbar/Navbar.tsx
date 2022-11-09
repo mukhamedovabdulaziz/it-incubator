@@ -2,7 +2,7 @@ import React from "react";
 import s from "./Navbar.module.css"
 import {NavLink} from "react-router-dom";
 
-export const Navbar = () => {
+function Navbar () {
 
   type actionPropsType = {
     [key: string]: boolean
@@ -30,3 +30,5 @@ export const Navbar = () => {
     </nav>
   )
 }
+
+export default Navbar;
