@@ -6,6 +6,6 @@ function Music() {
       Music
     </div>
   );
-};
+}
 
 export default Music;

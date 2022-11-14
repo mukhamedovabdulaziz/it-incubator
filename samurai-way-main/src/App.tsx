@@ -24,9 +24,9 @@ function App() {
         <div className="app-wrapper-content">
           <Routes>
             <Route path="/profile" element={<Profile posts={state.profilePage.posts}
-                                                       addPost={addPost}/>}/>
+                                                     addPost={addPost}/>}/>
             <Route path="/dialogs" element={<Dialogs dialogs={state.dialogsPage.dialogs}
-                                                       messages={state.dialogsPage.messages}/>}/>
+                                                     messages={state.dialogsPage.messages}/>}/>
             <Route path="/news" element={<News/>}/>
             <Route path="/music" element={<Music/>}/>
             <Route path="/settings" element={<Settings/>}/>

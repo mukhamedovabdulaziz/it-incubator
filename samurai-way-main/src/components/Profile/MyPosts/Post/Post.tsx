@@ -6,7 +6,7 @@ type PropsType = {
     likesCount: number
 }
 
-export const Post = (props: PropsType) => {
+function Post(props: PropsType) {
     return (
         <div className={s.item}>
             <img
@@ -19,3 +19,5 @@ export const Post = (props: PropsType) => {
         </div>
     )
 }
+
+export default Post;

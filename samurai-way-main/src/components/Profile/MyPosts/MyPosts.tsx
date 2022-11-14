@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./MyPosts.module.css"
-import {Post} from "./Post/Post";
+import Post from "./Post/Post";
 import {postDataType} from "../../../redux/state";
 
 type postsType = {
@@ -8,7 +8,7 @@ type postsType = {
   addPost: (postMessage:string) => void;
 }
 
-export const MyPosts = (props: postsType) => {
+function MyPosts(props: postsType) {
 
   let postsElements = props.posts.map(p => <Post message={p.message} likesCount={p.likes}/>)
 
@@ -36,3 +36,5 @@ export const MyPosts = (props: postsType) => {
     </div>
   )
 }
+
+export default MyPosts;
