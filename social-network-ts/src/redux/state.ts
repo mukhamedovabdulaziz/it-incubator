@@ -16,14 +16,20 @@ export type messagesDataType = {
   message: string
 }
 
+export type profilePageType = {
+  posts: Array<postDataType>
+  newPostText: string
+}
+
+export type dialogsPageType = {
+  dialogs: Array<dialogsDataType>,
+  messages: Array<messagesDataType>
+}
+
+
 export type stateType = {
-  profilePage: {
-    posts: Array<postDataType>
-  }
-  dialogsPage: {
-    dialogs: Array<dialogsDataType>,
-    messages: Array<messagesDataType>
-  }
+  profilePage: profilePageType
+  dialogsPage: dialogsPageType
 }
 
 let state: stateType = {
@@ -31,7 +37,8 @@ let state: stateType = {
     posts: [
       {id: 1, message: "Hello, how r u?", likes: 15},
       {id: 2, message: "It's my first post", likes: 20}
-    ]
+    ],
+    newPostText: "it-incubator"
   },
   dialogsPage: {
     dialogs: [
@@ -50,13 +57,19 @@ let state: stateType = {
   }
 }
 
-export let addPost = (postMessage: string) => {
+export let addPost = () => {
   let newPost: postDataType = {
     id: 5,
-    message: postMessage,
+    message: state.profilePage.newPostText,
     likes: 0
   };
   state.profilePage.posts.push(newPost);
+  state.profilePage.newPostText = '';
+  rerenderEntireTitle(state);
+}
+
+export let updateNewPost = (postMessage: string) => {
+  state.profilePage.newPostText = postMessage;
   rerenderEntireTitle(state);
 }
 
