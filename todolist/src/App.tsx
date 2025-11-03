@@ -46,17 +46,11 @@ export const App = () => {
     })
     setTasks(filteredTasks)
   }
-  // const taskList: TaskListPropsType = {
-  //   data: {
-  //     title: 'Task List',
-  //     tasks: [
-  //       { taskId: 1, title: 'Learn HTML', isDone: true },
-  //       { taskId: 2, title: 'Learn CSS', isDone: true },
-  //       { taskId: 3, title: 'Learn JavaScript', isDone: false },
-  //     ],
-  //     students: ['Alice', 'Bob', 'Charlie'],
-  //   }
-  // }
+
+  const changeTaskStatus = (taskId: string, isDone: boolean) => {
+    const newState = tasks.map(task => task.id === taskId ? { ...task, isDone } : task)
+    setTasks(newState)
+  }
 
   return (
     <div className="app">
@@ -64,8 +58,10 @@ export const App = () => {
         title="What to learn"
         tasks={filteredTasks}
         deleteTask={deleteTask}
+        filter={filter}
         changeFilter={changeFilter}
         createTask={createTask}
+        changeTaskStatus={changeTaskStatus}
       />
       {/* <TaskList data={taskList.data} /> */}
     </div>
